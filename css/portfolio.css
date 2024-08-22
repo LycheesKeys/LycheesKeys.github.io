@@ -1,0 +1,72 @@
+:root {
+    --close-button-padding: 8px;
+}
+
+.thumbnails {
+    padding: 16px;
+}
+.thumbnail-container, .thumbnail, .thumbnail-bg {
+    width: 20vw;
+    min-width: 200px;
+    pointer-events: none;
+}
+.thumbnail-container {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.thumbnail, .fa-play {
+    position: absolute;
+}
+.thumbnail {
+    z-index: 1;
+}
+    .thumbnail.hover {
+        opacity: 0;
+    }
+.fa-play {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 2em;
+    color: var(--light-grey);
+    opacity: 0;
+    filter: drop-shadow(0 0 0.5rem var(--dark-grey));
+}
+    .fa-play.hover {
+        opacity: 0.9;
+    }
+
+/* Modal Setup */
+.modal-content-wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+.modal-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.video-frame {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.close-icon {
+    transform: scale(0.6);
+    position: absolute !important;
+    top: var(--close-button-padding);
+    right: var(--close-button-padding);
+    background-color: var(--dark-grey) !important;
+}
+.close-icon:hover {
+    filter: brightness(50%);
+    background-color: var(--dark-grey) !important;
+}
+    .close-icon .fa-xmark {
+        color: white;
+    }

@@ -1,0 +1,33 @@
+.info-card {
+    background-color: var(--light-red) !important;
+  }
+  .card-title {
+    z-index: 1;
+    font-family: 'Fugaz One', cursive !important;
+    color: var(--light-grey);
+    text-shadow: 3px 0px var(--gold);
+  }
+  .card-divider {
+    background-color: var(--gold);
+  }
+  .card-content {
+    color: var(--light-grey);
+  }
+  .card-content p{
+    font-family: 'Chakra Petch', sans-serif;
+  }
+
+.avatar {
+  width: 128px !important;
+  height: 128px !important;
+  float: left;
+  margin-right: 16px;
+}
+
+.social-text * {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.fa-copy {
+  color: var(--light-grey);
+}

@@ -1,0 +1,291 @@
+/**
+Color Scheme
+Dark Red: #4e070d darkest red: #330509
+Red: #7f3b3a new red: #612d2d
+Light Red: #ac685f
+Dark Grey: #505050
+Grey: #727272
+Light Grey: #a9a9a9
+Gold: #a18d32
+
+Fonts
+font-family: 'Amatic SC', cursive; top
+font-family: 'Kavoon', cursive; top
+font-family: 'Six Caps', sans-serif; top
+
+font-family: 'Alfa Slab One', cursive; top
+font-family: 'Audiowide', cursive; Yesish
+font-family: 'Bangers', cursive;
+font-family: 'Carter One', cursive; top
+font-family: 'Fugaz One', cursive; top
+font-family: 'Libre Barcode 39', cursive;
+font-family: 'Shrikhand', cursive; maybe
+font-family: 'Ultra', serif; maybe
+font-family: 'Unica One', cursive; yesish
+
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Itim', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Play', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Russo One', sans-serif;
+font-family: 'Teko', sans-serif;
+*/
+:root {
+  /** Color Theming **/
+  --vdark-red: #3d050a;
+  --dark-red: #4e070d;
+  --red: #612d2d;
+  --light-red: #7f3b3a;
+  --vlight-red: #ac685f;
+  --dark-grey: #505050;
+  --dark-grey-trans: #22222255;
+  --grey: #727272;
+  --light-grey: #a9a9a9;
+  --gold: #a18d32;
+  --light-gold: #c9be89;
+  
+  /** Size definitions **/
+  --bg-img-size: 125px;
+  
+  /** Misc. Style Definitions **/
+  --anim-star-far: animStar 50s linear infinite;
+  --anim-star-mid: animStar 100s linear infinite;
+  --anim-star-near: animStar 150s linear infinite;
+}
+
+/** Nav Menu Style **/
+.menu {
+  flex-grow: 3;
+}
+.menu ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 16px;
+}
+
+.nav-link a, .nav-link a:visited {
+  font-family: 'Fugaz One', cursive;
+  font-size: 40px;
+  color: var(--light-grey);
+  text-shadow: 3px 0px var(--gold), 6px 0px var(--vlight-red), 9px 0px var(--light-red);
+  text-decoration: none;
+}
+
+.nav-link a:hover {
+  filter: url('#displacementFilter');
+}
+
+.nav-link-small a, .nav-link-small a:visited {
+  font-family: 'Fugaz One', cursive;
+  font-size: 30px;
+  color: var(--light-gold);
+  text-shadow: 3px 0px var(--gold), 6px 0px var(--vlight-red), 9px 0px var(--light-red);
+  text-decoration: none;
+}
+
+.nav-link-small a:hover {
+  filter: url('#displacementFilter');
+}
+
+/** Header Style **/
+.header {
+  flex: 0 1 auto;
+  background-color: var(--vdark-red);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-wrapper {
+  flex-grow: 1;
+  margin: 8px;
+}
+.logo {
+  width: 33vw;
+  max-width: 350px;
+}
+
+#portfolio-menu ul, #portfolio-menu li {
+  flex: 0 1 auto;
+  background-color: var(--red);
+  padding: 8px;
+  align-items: center;
+  z-index: 0;
+}
+
+/** Main Section Style **/
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--light-grey) var(--dark-grey-trans);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--dark-grey-trans);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--light-grey);
+  border-radius: 20px;
+}
+
+
+body {
+  background-color: var(--dark-grey);
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  perspective: 1px;
+  background: radial-gradient(ellipse at bottom, #351b1b 0%, #0f0909 100%);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+@-webkit-keyframes animStar {
+  from
+    {transform: translateY(0px)}
+  to		
+    {transform: translateY(-2000px)}
+}
+@-moz-keyframes    animStar {
+  from
+    {transform: translateY(0px)}
+  to		
+    {transform: translateY(-2000px)}
+}
+@-o-keyframes      animStar {
+  from
+    {transform: translateY(0px)}
+  to		
+    {transform: translateY(-2000px)}
+}
+@keyframes         animStar {
+  from
+    {transform: translateY(0px)}
+  to		
+    {transform: translateY(-2000px)}
+}
+.star-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.star-bg-after {
+  position: absolute;
+  top: 2000px;
+  left: 0;
+  z-index: -1;
+}
+  .star-anim-1 {
+    -webkit-animation: var(--anim-star-far); /* Safari 4+ */
+    -moz-animation:    var(--anim-star-far); /* Fx 5+ */
+    -o-animation:      var(--anim-star-far); /* Opera 12+ */
+    animation:         var(--anim-star-far); /* IE 10+ */
+  }
+  .star-anim-2 {
+    -webkit-animation: var(--anim-star-mid); /* Safari 4+ */
+    -moz-animation:    var(--anim-star-mid); /* Fx 5+ */
+    -o-animation:      var(--anim-star-mid); /* Opera 12+ */
+    animation:         var(--anim-star-mid); /* IE 10+ */
+  }
+  .star-anim-3 {
+    -webkit-animation: var(--anim-star-near); /* Safari 4+ */
+    -moz-animation:    var(--anim-star-near); /* Fx 5+ */
+    -o-animation:      var(--anim-star-near); /* Opera 12+ */
+    animation:         var(--anim-star-near); /* IE 10+ */
+  }
+
+#pageContent {
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/** Footer Style **/
+.fab-menu {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.fab-menu button {
+  background-color: var(--vlight-red);
+  margin: 8px;
+}
+  .fab-menu button:hover {
+    background-color: var(--vlight-red);
+    filter: brightness(50%);
+  }
+.fab-menu i {
+  color: white;
+}
+
+.footer {
+  background-color: var(--vdark-red);
+  position: sticky;
+  top: 100vh;
+  z-index: 1;
+  padding: 24px;
+  max-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer > * {
+  align-self: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+.social-link {
+  margin: 8px;
+}
+.social-link > * {
+  color: var(--light-grey);
+}
+.social-link > i {
+  margin-right: 4px;
+}
+
+.cp-statement {
+  margin: 8px;
+}
+.cp-statement > * {
+  color: var(--light-grey);
+}
+
+/** Filter Style **/
+.filters {
+  position: absolute;
+  top: 0;
+  z-index: -999;
+}
